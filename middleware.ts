@@ -16,9 +16,7 @@ export default auth((req) => {
   const pathname = nextUrl.pathname;
 
   const isLoggedIn = !!req.auth;
-
   const isAdmin = req.auth?.user?.role === "ADMIN";
-  console.log(req.auth?.user); // => { email: 'myemail@gmail.com' }
 
   const redirectTo = (path: string) => Response.redirect(new URL(path, nextUrl));
 

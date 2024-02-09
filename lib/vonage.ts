@@ -5,8 +5,8 @@ const vonageClientSingleton = () => {
   const vonageAuth = new Auth({
     apiKey: process.env.VONAGE_API_KEY,
     apiSecret: process.env.VONAGE_API_SECRET,
-    // applicationId: process.env.VONAGE_APPLICATION_ID,
-    // privateKey: Buffer.from(process.env.VONAGE_APPLICATION_PRIVATE_KEY64 || "", "base64"),
+    applicationId: process.env.VONAGE_APPLICATION_ID,
+    privateKey: Buffer.from(process.env.VONAGE_APPLICATION_PRIVATE_KEY64 || "", "base64"),
   });
 
   return new Vonage(vonageAuth);
